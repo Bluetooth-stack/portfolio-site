@@ -1,0 +1,31 @@
+.homeTag {
+  pointer-events: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 0;
+  left: -2.5rem;
+  font-size: 12rem;
+  color: var(--tagFont);
+  opacity: 0.4;
+  mix-blend-mode: multiply;
+  font-family: "Roboto Slab", serif;
+  letter-spacing: 1rem;
+  filter: drop-shadow(0 0 2px var(--tagFont));
+  z-index: -1;
+}
+
+@media screen and (max-width: 523px) {
+  .homeTag {
+    font-size: 5rem;
+    bottom: 8rem;
+    left: 0;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .homeTag {
+    font-size: 4rem;
+    bottom: 10rem;
+  }
+}

@@ -1,0 +1,207 @@
+.homeContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 50%;
+  margin: 5% auto;
+}
+
+.head {
+  margin: 0.5rem 0;
+  font-family: "Lobster", cursive;
+  font-size: 1.4rem;
+  color: var(--shadow);
+}
+
+.name {
+  position: relative;
+}
+
+.name h2 {
+  font-family: "Roboto Slab", serif;
+  margin: 0;
+  color: var(--white);
+  letter-spacing: 0.4rem;
+  font-size: 4.2rem;
+  /* animation: updown 1.5s alternate-reverse infinite; */
+}
+
+.name h2:nth-child(1) {
+  color: transparent;
+  -webkit-text-stroke-width: 0.1rem;
+  -webkit-text-stroke-color: var(--white);
+}
+
+.name h2:nth-child(2) {
+  color: var(--white);
+  position: absolute;
+  top: 0;
+  animation: updown 5s ease-in-out infinite;
+}
+
+.imTag {
+  font-family: "Roboto Slab", serif;
+  margin: 0.2rem;
+  color: var(--white);
+  letter-spacing: 0.4rem;
+}
+
+.aboutTag {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  text-align: center;
+  margin: 2.8rem 0;
+  line-height: 1.4rem;
+}
+
+.toAboutLink{
+  margin: 0;
+  text-decoration: none;
+  color: var(--white);
+  font-family: "Roboto Slab", serif;
+  font-size: 1rem;
+  align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.toAboutLink .arrowEast{
+  color: var(--white);
+  animation: move 0.5s ease-in-out alternate-reverse infinite;
+}
+
+.toAboutLink:hover{
+  text-decoration: underline;
+}
+
+
+@keyframes move {
+  0%{
+    transform: translateX(4px);
+  }
+  100%{
+    transform: translateX(-2px);
+  }
+}
+
+@keyframes updown {
+  0%,
+  100% {
+    clip-path: polygon(
+      0% 45%,
+      15% 44%,
+      32% 50%,
+      54% 60%,
+      70% 61%,
+      84% 59%,
+      100% 52%,
+      100% 100%,
+      0% 100%
+    );
+  }
+  50% {
+    clip-path: polygon(
+      0 60%,
+      16% 65%,
+      34% 66%,
+      51% 62%,
+      67% 50%,
+      84% 45%,
+      100% 40%,
+      100% 100%,
+      0% 100%
+    );
+  }
+}
+
+@media screen and (max-width: 1188px) {
+  .name h2 {
+    font-size: 3.8rem;
+  }
+  .homeContainer {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 1070px) {
+  .name h2 {
+    font-size: 3.2rem;
+  }
+}
+
+@media screen and (max-width: 926px) {
+  .name h2 {
+    font-size: 2.5rem;
+  }
+  .head {
+    font-size: 1rem;
+  }
+  .imTag {
+    font-size: 0.9rem;
+  }
+  .aboutTag {
+    font-size: 0.8rem;
+  }
+  .toAboutLink{
+    font-size: 0.8rem;
+  }
+  .homeContainer {
+    margin: 10% auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .name h2 {
+    font-size: 1.8rem;
+  }
+  .imTag {
+    letter-spacing: 0.2rem;
+    font-size: 0.6rem;
+  }
+  .homeContainer {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 598px) {
+  .homeTag {
+    font-size: 9rem;
+    bottom: 2rem;
+  }
+  .homeContainer {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .name h2 {
+    font-size: 1.4rem;
+  }
+  .head {
+    font-size: 0.6rem;
+  }
+  .imTag {
+    font-size: 0.6rem;
+    letter-spacing: 0.1rem;
+    transform: translateX(0) !important;
+  }
+  .aboutTag {
+    font-size: 0.6rem;
+    line-height: 1rem;
+  }
+  .toAboutLink{
+    font-size: 0.6rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .name h2 {
+    font-size: 1.1rem;
+  }
+  .imTag {
+    font-size: 0.5rem;
+  }
+}

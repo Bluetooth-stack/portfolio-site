@@ -1,0 +1,120 @@
+.detailsContainer {
+  margin: 5% 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageContainer {
+  height: 16rem;
+  width: 15rem;
+  position: relative;
+  border: 1px solid var(--shadow);
+  border-radius: 0.5rem;
+}
+
+.imageContainer::before {
+  content: "";
+  height: 16rem;
+  width: 15rem;
+  position: absolute;
+  bottom: 0.5rem;
+  left: 1rem;
+  border-radius: 0.5rem;
+  background-color: #ff4c82;
+  opacity: 0.33;
+  transition: 0.4s ease-in-out;
+  z-index: 1;
+}
+
+.imageContainer img {
+  height: 16rem;
+  width: 15rem;
+  border-radius: 0.5rem;
+  position: absolute;
+  left: 1rem;
+  bottom: 0.5rem;
+}
+
+.imageContainer:hover::before {
+  opacity: 0;
+  transform: translateX(6px) translateY(-6px);
+}
+
+.imageContainer:hover img {
+  transform: translateX(6px) translateY(-6px);
+}
+
+.aboutContainer {
+  width: 50%;
+}
+.aboutContainer .aboutme {
+  text-align: justify;
+  font-size: 1rem;
+  line-height: 1.4rem;
+  font-family: "Roboto", sans-serif;
+  color: var(--grey);
+}
+.aboutContainer .aboutme span {
+  color: var(--shadow);
+  font-weight: bold;
+}
+
+.aboutContainer ul {
+  display: flex;
+  gap: 4rem;
+  flex-wrap: wrap;
+  list-style: "\25B8";
+}
+
+.aboutContainer ul li {
+  color: #ff4c82;
+  padding-bottom: 0.5rem;
+}
+.aboutContainer ul li span {
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  color: var(--white);
+  padding-left: 0.5rem;
+}
+
+@media screen and (max-width: 730px) {
+  .detailsContainer {
+    flex-direction: column;
+    margin-bottom: 4.8%;
+    gap: 2rem;
+  }
+  .aboutContainer {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 510px) {
+  .imageContainer img,
+  .imageContainer::before,
+  .imageContainer {
+    height: 11rem;
+    width: 10rem;
+  }
+}
+
+@media screen and (max-width: 379px) {
+    .aboutContainer .aboutme, .aboutContainer .aboutme span {
+        font-size: 0.8rem;
+        line-height: 1.2rem;
+      }
+      .aboutContainer ul {
+        flex-direction: column;
+        gap: 0.2rem;
+      }
+      .aboutContainer ul li {
+        padding: 1px;
+      }
+      .aboutContainer ul li span {
+        font-size: 0.8rem;
+      }
+}
+
+

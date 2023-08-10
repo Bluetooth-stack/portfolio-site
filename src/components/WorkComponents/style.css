@@ -1,0 +1,287 @@
+.workContainer {
+  margin: 2% auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  width: 60%;
+}
+
+.workHeading {
+  display: inline-block;
+  width: fit-content;
+  font-family: "Roboto Slab", serif;
+  font-size: 2rem;
+  margin-bottom: 2.4rem;
+  color: var(--white);
+  letter-spacing: 0.2rem;
+  position: relative;
+}
+
+.workHeading span {
+  color: var(--shadow);
+}
+
+.workHeading::before {
+  content: "";
+  position: absolute;
+  bottom: 0.7rem;
+  right: -8.4rem;
+  height: 0.05rem;
+  width: 8rem;
+  background-color: var(--shadow);
+}
+
+.imgContainer {
+  height: 16.8rem;
+  width: 30rem;
+  position: relative;
+  border-radius: 0.2rem;
+  cursor: pointer;
+}
+
+.imgContainer::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-radius: 0.15rem;
+  background-color: #000000;
+  opacity: 0.5;
+  transition: 0.4s ease-in-out;
+  z-index: 1;
+}
+
+.imgContainer img {
+  height: 100%;
+  width: 100%;
+  border-radius: 0.2rem;
+}
+
+.imgContainer:hover::before {
+  opacity: 0;
+}
+
+.project {
+  display: flex;
+  position: relative;
+  margin-bottom: 18.8%;
+}
+
+.project:nth-child(odd){
+    flex-direction: row-reverse;
+}
+
+.project:nth-child(odd) .details{
+    left: 0;
+    align-items: flex-start;
+}
+
+.project:nth-child(odd) .details .techStack{
+    justify-content: flex-start;
+}
+
+.project:nth-child(odd) .details .webLinkContainer{
+    justify-content: flex-start;
+}
+
+.details {
+  position: absolute;
+  right: 0;
+  width: 58.8%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  z-index: 2;
+}
+
+.details .projName {
+  margin: 0;
+  margin-bottom: 0.5rem;
+  font-family: "Roboto Slab", serif;
+  font-size: 1.5rem;
+  color: var(--white);
+  cursor: pointer;
+}
+
+.details .projName:hover {
+  color: var(--shadow);
+}
+
+.details .projInfo {
+  width: 94%;
+  word-break: break-all;
+  word-wrap: break-word;
+  font-family: "Roboto", sans-serif;
+  text-align: justify;
+  margin: 0.6rem 0;
+  padding: 1rem 1.4rem;
+  color: var(--grey);
+  background-color: var(--progDetails);
+  border-radius: 0.2rem;
+  box-shadow: 0 0 5px var(--progDetails);
+}
+
+.techStack {
+  width: 66%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  color: var(--grey);
+  font-size: 0.85rem;
+  z-index: 2;
+}
+
+.webLinkContainer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 20%;
+  gap: 1rem;
+}
+
+.webLinkContainer .linktoWeb {
+  color: var(--white);
+  transition: 0.2s ease-out !important;
+}
+
+.webLinkContainer .linktoWeb:hover {
+  color: var(--shadow);
+  transform: translateY(2px);
+}
+
+@media screen and (max-width: 1030px) {
+  .imgContainer::before {
+    border: 1px solid black;
+    opacity: 0.84;
+  }
+}
+
+@media screen and (max-width: 841px) {
+  .workContainer {
+    width: 80%;
+    margin: 2% auto 8% auto;
+  }
+  .imgContainer {
+    height: 20rem;
+    width: 100%;
+  }
+  .details {
+    padding: 0.5rem;
+    left: 0;
+    width: 96.6%;
+    align-items: flex-start;
+  }
+  .techStack {
+    width: 88%;
+    justify-content: flex-start;
+  }
+  .details .projInfo {
+    margin: 0.6rem 0;
+    padding: 0;
+    color: var(--grey);
+    background-color: transparent;
+    box-shadow: none;
+  }
+  .webLinkContainer {
+    justify-content: flex-start;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .workHeading {
+    font-size: 1.6rem;
+  }
+  .workHeading::before {
+    width: 7.2rem;
+    bottom: 0.6rem;
+    right: -7.5rem;
+  }
+  .details .projName {
+    font-size: 1.2rem;
+  }
+  .details .projInfo {
+    font-size: 0.9rem;
+  }
+  .techStack {
+    font-size: 0.77rem;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .workHeading {
+    font-size: 1.3rem;
+  }
+  .workHeading::before {
+    width: 6.5rem;
+    bottom: 0.45rem;
+    right: -6.6rem;
+  }
+  .imgContainer {
+    height: 15rem;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 484px) {
+  .workHeading {
+    font-size: 1rem;
+  }
+  .workHeading::before {
+    width: 5rem;
+    bottom: 0.35rem;
+    right: -5.1rem;
+  }
+  .details .projName {
+    font-size: 1rem;
+  }
+  .details .projInfo {
+    font-size: 0.8rem;
+  }
+  .techStack {
+    font-size: 0.68rem;
+  }
+}
+
+@media screen and (max-width: 390px) {
+    .workHeading {
+      font-size: 0.95rem;
+    }
+    .workHeading::before {
+      width: 2rem;
+      bottom: 0.3rem;
+      right: -2.2rem;
+    }
+    .imgContainer {
+        height: 12rem;
+        width: 100%;
+      }
+      .project{
+        margin-bottom: 28%;
+      }
+  }
+
+@media screen and (max-width: 330px) {
+  .workHeading {
+    font-size: 1.2rem;
+  }
+  .workHeading::before {
+    width: 0;
+    bottom: 0;
+    left:0;
+  }
+  .imgContainer {
+    height: 10rem;
+    width: 100%;
+  }
+  .project{
+    margin-bottom: 66%;
+  }
+}

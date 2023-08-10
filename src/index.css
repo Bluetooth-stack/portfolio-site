@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Merienda:wght@400;500;600;700;800;900&family=Roboto+Slab:wght@300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+:root {
+  --black: #141414;
+  --white: #f0f0f0;
+  --background: #130006;
+  --shadow: #ff4c82;
+  --grid: #30303033;
+  --grey: #acacac;
+  --tagFont: #140606;
+  --progDetails: #350010;
+  --footShadow: #8a1437;
+}
+
+[data-theme="light"] {
+  --black: #f0f0f0;
+  --white: #141414;
+  --background: #f0f0f0;
+  --shadow: #ff4c82;
+  --grid: #c5c5c544;
+  --grey: #7c7c7c;
+  --tagFont: #dfdfdf7a;
+  --progDetails: #d4d4d4;
+  --footShadow: #111010;
+}
+
+* {
+  transition: 0.26s ease-in-out;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto Slab", serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background);
+  background-image: linear-gradient(
+      var(--grid) 0.03rem,
+      transparent 0.03rem,
+      transparent calc(100% - 0.5px),
+      var(--grid) calc(100% - 0.5px),
+      transparent
+    ),
+    linear-gradient(
+      90deg,
+      var(--grid) 0.03rem,
+      transparent 0.03rem,
+      transparent calc(100% - 0.5px),
+      var(--grid) calc(100% - 0.5px),
+      transparent
+    );
+  background-size: 10% 16%;
+  color: var(--white);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+::selection {
+  background-color: #fa2666;
+  color: lightgray;
+}
+
+::-webkit-scrollbar {
+  width: 0.4rem;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #fa2666;
+  transition: 0.5s ease-out;
+}
+
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+}

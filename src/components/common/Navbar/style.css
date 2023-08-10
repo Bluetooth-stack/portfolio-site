@@ -1,0 +1,179 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--background);
+    box-shadow: 0 0 8px black;
+    position: sticky;
+    top: 0;
+    padding: 1rem 2.6rem;
+    z-index: 100;
+    transition: 0.3s ease-out;
+}
+
+.navbar .logo{
+    margin: 0;
+    font-size: 2.5rem;
+    color: var(--shadow);
+    font-family: 'Lobster', cursive;
+    cursor: pointer;
+    text-shadow: 0 0 2px #fa266633, 0 0 8px #fa266669, 0 0 16px #fa26669c, 0 0 32px #fa2666;
+}
+
+.navbar .logo:hover{
+    animation: animateLogo 2s alternate-reverse infinite;
+}
+
+.linkContainer{
+    width: 28%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.linkContainer .link{
+    font-family: 'Merienda', cursive;
+    text-decoration: none;
+    color: #a7a7a7;
+    transition: 0.5s ease-out;
+}
+
+.linkContainer .link:hover{
+    transform: translateY(-6px);
+    color: var(--shadow);
+}
+
+.linkContainer .link.active{
+    transform: translateY(-6px);
+    color: var(--shadow);
+}
+
+.sun, .moon{
+    cursor: pointer;
+    color: var(--white);
+}
+
+.burgerMenu{
+    display: none;
+}
+
+@keyframes animateLogo {
+    0%, 100%{
+        transform: rotate(0);
+    }
+    25%{
+        transform: rotate(90deg) ;
+    }
+    50%{
+        transform: rotate(180deg) ;
+    }
+    75%{
+        transform: rotate(280deg) ;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .linkContainer {
+      display: none;
+    }
+  
+    .burgerMenu {
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+    }
+
+    .MuiButtonBase-root.MuiButton-root{
+      padding: 0 !important;
+      margin: 0 !important;
+    }
+  
+    .navbar {
+      padding: 1.6rem 2rem;
+    }
+
+    .navbar .logo{
+        font-size: 1.8rem;
+    }
+  
+    .menuIcon {
+      color: var(--grey);
+      font-weight: 600;
+      transition: 0.3s ease-out;
+    }
+    .menuIcon:hover {
+      color: var(--shadow);
+    }
+  
+    .closeMenu {
+      position: absolute;
+      top: 0.4rem;
+      left: 1rem;
+      font-size: 0.2rem;
+      color: var(--grey);
+      cursor: pointer;
+      transition: 0.5s ease-out;
+    }
+  
+    .closeMenu:hover {
+      color: var(--shadow);
+      transform: scale(0.8);
+    }
+  
+    .menuList {
+      padding-top: 4rem;
+      height: 100dvh;
+      width: 66dvw;
+      background: var(--background);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.6rem;
+      transition: 0.3s ease-out;
+    }
+  
+    .drawerlink {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      column-gap: 0.8rem;
+      text-decoration: none;
+      color: var(--grey);
+      font-weight: 600;
+      font-size: 0.8rem;
+      padding: 0.9rem 1rem;
+      transition: 0.3s ease-out;
+    }
+  
+    .drawerlink:hover {
+        transform: translateX(-6px);
+        color: var(--shadow);
+    }
+  
+    .drawerlink.active {
+        padding: 0.4rem 1rem;
+        background-color: var(--shadow);
+        color: var(--white);
+        pointer-events: none;
+    }
+  
+    .themeSwitch{
+      position: absolute;
+      top: 0.5rem;
+      right: 1.8rem;
+    }
+  
+  }
+
+  @media screen and (max-width: 763px) {
+    .navbar{
+      padding: 1.6rem 1.2rem;
+    }
+  }
+
+
+  @media screen and (max-width: 520px) {
+    .navbar{
+      padding-right: 0.2rem;
+    }
+  }

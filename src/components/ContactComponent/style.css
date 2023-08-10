@@ -1,0 +1,136 @@
+.contactContainer {
+  margin: 2% auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+}
+
+.contactHeading {
+  align-self: flex-start;
+  display: inline-block;
+  width: fit-content;
+  font-family: "Roboto Slab", serif;
+  font-size: 2rem;
+  margin-bottom: 0.9rem;
+  color: var(--white);
+  letter-spacing: 0.2rem;
+}
+
+.contactHeading span {
+  color: var(--shadow);
+}
+
+.contactPara {
+  color: var(--white);
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.contactPara span {
+  color: var(--shadow);
+  font-weight: bold;
+}
+
+.formControl {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.formControl input {
+  padding: 0.6rem 0.4rem;
+  color: var(--white);
+  background-color: transparent;
+  outline: none;
+  border: 1px solid var(--white);
+  border-radius: 0.2rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.9rem;
+}
+
+.formControl textarea {
+  padding: 0.6rem 0.4rem;
+  color: var(--white);
+  background-color: transparent;
+  outline: none;
+  border: 1px solid var(--white);
+  border-radius: 0.2rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.9rem;
+  resize: none;
+  overflow-y: auto;
+}
+
+.formControl input:focus,
+.formControl textarea:focus {
+  border: 1px solid var(--shadow);
+  box-shadow: 0 0 8px var(--shadow);
+  outline: none;
+}
+
+.formControl button {
+  border: none;
+  outline: none;
+  border-radius: 0.2rem;
+  align-self: flex-start;
+  padding: 0.8rem 1rem;
+  font-family: "Roboto Slab", serif;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: var(--white);
+  color: var(--black);
+}
+
+@media screen and (max-width: 1034px) {
+    .contactContainer{
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 926px) {
+    .contactContainer{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 722px) {
+    .formControl{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 489px) {
+    .formControl{
+        width: 84%;
+    }
+    .contactHeading{
+        font-size: 1.6rem;
+    }
+    .contactPara{
+        font-size: 0.85rem;
+    }
+    .formControl button{
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 376px) {
+    .formControl{
+        width: 100%;
+    }
+    .contactHeading{
+        font-size: 1.4rem;
+    }
+    .contactPara{
+        font-size: 0.81rem;
+    }
+    .formControl button{
+        font-size: 0.75rem;
+    }
+}

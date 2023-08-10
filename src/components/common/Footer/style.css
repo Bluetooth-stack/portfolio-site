@@ -1,0 +1,51 @@
+.footerContainer{
+    position: fixed;
+    bottom: 9rem;
+    right: 2.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.2rem;
+}
+
+.footerContainer::before{
+    content: '';
+    height: 6.6rem;
+    width: 0.018rem;
+    background-color: var(--white);
+    position: absolute;
+    bottom: -8.4rem;
+    box-shadow: 0 0 1px var(--white);
+    opacity: 0.8;
+}
+
+.footer-icon{
+    opacity: 0.8;
+    color: var(--white);
+    cursor: pointer;
+    transition: 0.2s ease-out;
+}
+
+.footer-icon:hover{
+    transition: 0.2s ease-out;
+    transform: translateY(-4px);
+    color: var(--shadow);
+    opacity: 1;
+}
+
+.mobFooterContainer{
+    background-color: var(--background);
+    opacity: 1;
+    padding: 0.5rem 0;
+    position: fixed;
+    bottom: 1.9rem;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 2rem;
+    box-shadow: 0 0 12px var(--footShadow);
+    z-index: 10;
+}

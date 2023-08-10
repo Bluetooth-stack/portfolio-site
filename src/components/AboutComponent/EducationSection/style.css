@@ -1,0 +1,124 @@
+.eduContainer {
+  margin: 8% auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  width: 60%;
+}
+
+.eduheading {
+  display: inline-block;
+  width: fit-content;
+  font-family: "Roboto Slab", serif;
+  font-size: 2rem;
+  color: var(--white);
+  letter-spacing: 0.2rem;
+  position: relative;
+}
+.eduheading span {
+  color: var(--shadow);
+}
+
+.eduheading::before {
+  content: "";
+  position: absolute;
+  bottom: 0.7rem;
+  right: -8.4rem;
+  height: 0.05rem;
+  width: 8rem;
+  background-color: var(--shadow);
+}
+
+.timeLine {
+  position: relative;
+  padding-left: 1rem;
+  color: var(--white);
+  border-left: 1px solid var(--grey);
+}
+
+.timeLine::before {
+  content: "";
+  height: 0.8rem;
+  width: 0.8rem;
+  border-radius: 50%;
+  border: 2px solid var(--shadow);
+  background-color: var(--background);
+  position: absolute;
+  top: 0;
+  left: -0.56rem;
+}
+
+.ug {
+  align-self: flex-end;
+  text-align: right;
+  position: relative;
+  padding-right: 1rem;
+  color: var(--white);
+  border-right: 1px solid var(--grey);
+}
+
+.ug::before {
+  content: "";
+  height: 0.8rem;
+  width: 0.8rem;
+  border-radius: 50%;
+  border: 2px solid var(--shadow);
+  background-color: var(--background);
+  position: absolute;
+  top: 0;
+  right: -0.56rem;
+}
+
+.timeLine P,
+.ug p {
+  font-family: 'Roboto', sans-serif;
+  color: var(--grey);
+}
+
+.university {
+  font-family: 'Roboto Slab', serif;
+}
+
+@media screen and (max-width: 730px) {
+  .eduContainer {
+    width: 85%;
+    margin-bottom: 12%;
+  }
+}
+
+@media screen and (max-width: 398px) {
+  .eduheading {
+    font-size: 1.4rem;
+  }
+  .eduheading::before {
+    width: 6.5rem;
+    bottom: 0.45rem;
+    right: -7rem;
+  }
+  .university {
+    font-size: 0.94rem;
+  }
+  .timeLine P,
+  .ug p {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 299px) {
+  .eduheading {
+    font-size: 1.2rem;
+  }
+  .eduheading::before {
+    width: 5.6rem;
+    bottom: 0.38rem;
+    right: -5.8rem;
+  }
+  .university {
+    font-size: 0.86rem;
+  }
+  .timeLine P,
+  .ug p {
+    font-size: 0.7rem;
+  }
+}
