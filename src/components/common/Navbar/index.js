@@ -7,7 +7,13 @@ import { motion } from 'framer-motion';
 import './style.css'
 
 function Navbar() {
-  const [dark, setDark] = useState(true);
+  const [dark, setDark] = useState(()=>{
+    let lastThemeSelected = localStorage.getItem('pageTheme');
+    if(lastThemeSelected==='dark'){
+      return 'dark'
+    }
+    return 'light'
+});
   const [lastScrollY, setLastScrollY] = useState(0);
   const [show, setShow] = useState(true);
 
@@ -38,8 +44,8 @@ function Navbar() {
     }
   }, [lastScrollY]);
 
+  const lastThemeSelected = localStorage.getItem('pageTheme');
   useEffect(() => {
-    const lastThemeSelected = localStorage.getItem('pageTheme');
     
     if (lastThemeSelected === 'dark') {
       setDarkTheme();
@@ -47,7 +53,7 @@ function Navbar() {
     else {
       setLightTheme();
     }
-  },[])
+  },[lastThemeSelected])
   
   function setDarkTheme() {
     document.querySelector('body').setAttribute('data-theme', 'dark');
@@ -83,10 +89,10 @@ function Navbar() {
         <NavLink className='link' to={'/work'}>Work</NavLink>
         <NavLink className='link' to={'/contact'}>Contact</NavLink>
         {
-          dark ?
-            <FlareIcon className='sun' onClick={() => { setDark(false); setLightTheme() }} />
+          dark==='dark' ?
+            <FlareIcon className='sun' onClick={() => { setDark('light'); setLightTheme() }} />
             :
-            <NightlightIcon className='moon' onClick={() => { setDark(true); setDarkTheme() }} />
+            <NightlightIcon className='moon' onClick={() => { setDark('dark'); setDarkTheme() }} />
         }
       </div>
       <div className='burgerMenu'>
