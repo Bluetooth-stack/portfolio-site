@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Drawer from '@mui/material/Drawer';
 import Button from '@mui/material/Button';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -11,16 +11,35 @@ import FlareIcon from '@mui/icons-material/Flare';
 
 export default function Hamburger() {
     const [state, setState] = useState(false);
-    const [dark, setDark] = useState(true);
-    const setDarkTheme = () => {
+    const [dark, setDark] = useState(() => {
+        let lastThemeSelected = localStorage.getItem('pageTheme');
+        if (lastThemeSelected === 'dark') {
+            return 'dark'
+        }
+        return 'light'
+    });
+
+    const lastThemeSelected = localStorage.getItem('pageTheme');
+
+    useEffect(() => {
+
+        if (lastThemeSelected === 'dark') {
+            setDarkTheme();
+        }
+        else {
+            setLightTheme();
+        }
+    }, [lastThemeSelected])
+
+    function setDarkTheme() {
         document.querySelector('body').setAttribute('data-theme', 'dark');
-        setDark(true)
+        localStorage.setItem('pageTheme', 'dark');
+    }
+    function setLightTheme() {
+        document.querySelector('body').setAttribute('data-theme', 'light');
+        localStorage.setItem('pageTheme', 'light');
     }
 
-    const setLightTheme = () => {
-        document.querySelector('body').setAttribute('data-theme', 'light');
-        setDark(false)
-    }
 
 
     return (
@@ -34,10 +53,10 @@ export default function Hamburger() {
                 <div className='menuList'>
                     <div className='themeSwitch'>
                         {
-                            dark ?
-                                <FlareIcon className='sun' onClick={() => { setLightTheme() }} />
+                            dark === 'dark' ?
+                                <FlareIcon className='sun' onClick={() => { setDark('light'); setLightTheme() }} />
                                 :
-                                <NightlightIcon className='moon' onClick={() => { setDarkTheme() }} />
+                                <NightlightIcon className='moon' onClick={() => { setDark('dark'); setDarkTheme() }} />
                         }
                     </div>
 
