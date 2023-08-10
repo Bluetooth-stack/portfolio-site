@@ -1,4 +1,4 @@
-#Siddharth_Hota
+# Siddharth_Hota
 
 Its my portfolio to represent myself to the internet world. Designed and developed by me to represent my skills, projects and my personal details.
 
