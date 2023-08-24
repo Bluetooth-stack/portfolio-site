@@ -51,9 +51,9 @@ function ExperienceSection() {
                 position={'Graphics Designer Intern'}
                 duration={' Feb-Apr 2022 (Remote)'}
                 techStack={'Adobe Illustrator | MS Powerpoint'}
-                desc1={' Designed illustrations for ad and presentations that increases content quality.'}
-                desc2={'Collaborated with sales & marketing team to create presentations that helps them represent their product & increase sales by 15%.'}
-                desc3={'Managed and improved existing templates to match the current design that helped in design consistency.'}
+                desc1={'Designed illustrations for website & built ad purpose presentations that increases content quality by 10%!'}
+                desc2={'Assisted designers & worked with sales department to develop interactive and attractive presentation that get us up-to 15% sales!'}
+                desc3={'Maintained & improved existing templates to match the approved design that helped in data consistency!'}
             />
 
             <motion.a

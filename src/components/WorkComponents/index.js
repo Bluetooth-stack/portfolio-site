@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 import crypto from '../../Assets/crypto.png';
 import code from '../../Assets/&code.png';
 import shop from '../../Assets/meshop.png';
+import podcasters from '../../Assets/podcasters.png';
+import cart from '../../Assets/cart.png'
 import ProjectDiv from './projectDiv'
 import './style.css'
 
@@ -24,6 +26,15 @@ function WorkComponent() {
                     }
                 }}
                 className='workHeading'>Some Things I've Built <span>.</span></motion.h2>
+
+            <ProjectDiv
+                thumbnail={podcasters}
+                pName={'Podcasters'}
+                pInfo={"Its a responsive platform dedicated to the podcasters to have an online platform to create their profile and showcase their experience & knowledge in the form of audio podcasts over the world!"}
+                techStack={['React', 'Redux-toolkit', 'Styled-component', 'CSS', 'Firebase', 'Netlify']}
+                gitrepo={'https://github.com/Bluetooth-stack/podcaster'}
+                pLink={'https://podcasters-audio.netlify.app/'}
+            />
 
             <ProjectDiv
                 thumbnail={crypto}
@@ -51,6 +62,16 @@ function WorkComponent() {
                 gitrepo={'https://github.com/Bluetooth-stack/Me-Shop'}
                 pLink={'https://bluetooth-stack.github.io/Me-Shop/'}
             />
+
+            <ProjectDiv
+                thumbnail={cart}
+                pName={'MyCart'}
+                pInfo={"This webapp replicate the cart functionality of a e-commerce app."}
+                techStack={['React', 'Redux', 'CSS', 'Product-API']}
+                gitrepo={'https://github.com/Bluetooth-stack/shopping-cart'}
+                pLink={'https://shopping-reduxcart.netlify.app/'}
+            />
+
         </div>
     )
 }

@@ -97,7 +97,7 @@
     }
   
     .menuIcon {
-      color: var(--grey);
+      color: var(--blue);
       font-weight: 600;
       transition: 0.3s ease-out;
     }
