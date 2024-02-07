@@ -1,5 +1,4 @@
 import React from 'react'
-import Navbar from '../../components/common/Navbar';
 import Footer from '../../components/common/Footer';
 import Foot from '../../components/common/Footer/Foot';
 import Pagename from '../../components/common/Pagename'
@@ -15,7 +14,6 @@ function About() {
       animate={{ scale: 1 }}
       exit={{ scale: 0.8 }}
     >
-      <Navbar />
 
       <Pagename pageName={'About'} />
       <DetailsSection />

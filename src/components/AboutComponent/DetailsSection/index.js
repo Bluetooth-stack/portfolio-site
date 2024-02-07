@@ -126,6 +126,25 @@ function DetailsSection() {
                         <li><span>CSS</span></li>
                         <li><span>Firebase</span></li>
                     </motion.div>
+                    <motion.div
+                        key={"list2"}
+        
+                        initial={{ opacity: 0, x: 90 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{
+                            duration: 0.5,
+                            delay: 0.8,
+                            scale: {
+                                type: "spring",
+                                damping: 5,
+                                stiffness: 100,
+                                restDelta: 0.001
+                            }
+                        }}
+                    >
+                        <li><span>Redux & Redux toolkit</span></li>
+                        <li><span>FramerMotion</span></li>
+                    </motion.div>
                 </ul>
             </div>
         </div>

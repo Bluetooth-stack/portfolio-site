@@ -1,7 +1,6 @@
 import React from 'react'
 import ContactDetails from '../../components/ContactComponent'
 import { ToastContainer } from 'react-toastify'
-import Navbar from '../../components/common/Navbar';
 import Footer from '../../components/common/Footer';
 import Foot from '../../components/common/Footer/Foot';
 import { motion } from 'framer-motion'
@@ -26,7 +25,6 @@ function Contact() {
         pauseOnHover
         theme="light"
       />
-      <Navbar />
 
       <Pagename pageName={'Contact'} />
       <ContactDetails />
