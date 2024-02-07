@@ -108,7 +108,7 @@
 }
 
 .details .projName:hover {
-  color: var(--shadow);
+  transform: scale(0.96);
 }
 
 .details .projInfo {
@@ -160,7 +160,12 @@
 @media screen and (max-width: 1030px) {
   .imgContainer::before {
     border: 1px solid black;
-    opacity: 0.84;
+    opacity: 0.9;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .details .projName {
+    color: var(--grey);
   }
 }
 
@@ -172,6 +177,7 @@
   .imgContainer {
     height: 20rem;
     width: 100%;
+    pointer-events: none;
   }
   .details {
     padding: 0.5rem;
@@ -185,13 +191,17 @@
   }
   .details .projInfo {
     margin: 0.6rem 0;
-    padding: 0;
-    color: var(--grey);
-    background-color: transparent;
+    padding: 0.5rem 0.8rem;
     box-shadow: none;
+  }
+  .details .projName {
+    color: var(--shadow);
   }
   .webLinkContainer {
     justify-content: flex-start;
+  }
+  .webLinkContainer .linktoWeb{
+    color: var(--shadow);
   }
 }
 
@@ -248,6 +258,7 @@
   .techStack {
     font-size: 0.68rem;
   }
+  
 }
 
 @media screen and (max-width: 390px) {
