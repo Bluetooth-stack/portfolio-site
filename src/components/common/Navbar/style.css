@@ -86,6 +86,7 @@
     .MuiButtonBase-root.MuiButton-root{
       padding: 0 !important;
       margin: 0 !important;
+      color: rgb(85, 85, 85);
     }
   
     .navbar {
